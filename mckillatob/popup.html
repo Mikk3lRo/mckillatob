@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>mckillatob</title>
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="mckillatob" id="mckillatob">
+            <form action="" method="post" accept-charset="utf-8" id="popup-form">
+                <div class="host__name">
+                    <select id="host" name="host"></select>
+                    <a class="is-hidden" id="goto-host" href="#">go to</a>
+                </div>
+                <div class="host__enable">
+                    <div>
+                        <label for="enable">
+                            <input id="enable" name="enable" type="checkbox">
+                            Enable <em class="blue-text">mckillatob</em> for this host
+                        </label>
+                    </div>
+                    <div class="if_host_enabled">
+                        <div>
+                            <label for="enableEval">
+                                <input id="enableEval" name="enableEval" type="checkbox">
+                                Enable <code class="blue-text">window.eval()</code> for this host
+                            </label>
+                        </div>
+                        <div>
+                            <label for="enableAtob">
+                                <input id="enableAtob" name="enableAtob" type="checkbox">
+                                Enable <code class="blue-text">window.atob()</code> for this host
+                            </label>
+                        </div>
+                        <div>
+                            <label for="enableOpen">
+                                <input id="enableOpen" name="enableOpen" type="checkbox">
+                                Enable <code class="blue-text">window.open()</code> for this host
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <input type="submit" id="save" class="controls__save" name="save" value="save">
+                    <input type="submit" id="reset" class="controls__reset" name="reset" value="reset">
+                </div>
+
+            </form>
+
+            <div id="error" class="error is-hidden">
+                <strong>MC Kill Atob says:</strong>
+                <p class="red-text">It seems that this page cannot be modified with me...</p>
+                <span>Tip: Try to <a href="#" id="refresh_page">refresh the page</a></span>
+            </div><!-- .error -->
+        </div>
+        <script src="lib/popup.js"></script>
+    </body>
+</html>
